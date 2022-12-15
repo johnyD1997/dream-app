@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+section{
+    background-color: bisque;
+    display: block;
+    padding: 1rem;
+    margin: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+}

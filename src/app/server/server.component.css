@@ -1,0 +1,12 @@
+section{
+    background-color: blue;
+    color: bisque;
+    margin: 1rem;
+    padding: 1rem;
+
+}
+
+section h1{
+    font-size: 4rem;
+    text-align: center;
+}
