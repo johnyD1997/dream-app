@@ -14,3 +14,8 @@ p{
 .servers-component{
     background-color: rgb(255, 208, 151);
 }
+
+label{
+    font-size: 2rem;
+    text-align: start;
+}

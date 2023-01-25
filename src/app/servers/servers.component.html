@@ -1,9 +1,16 @@
 <section class="servers-component">
     <h1>Im in the Servers Component</h1>
-    <button [disabled]="allowNewServer" class="btn btn-primary">Add Server</button>
-    <p>{{ allowNewServer }} - string interpolation on p.tagin sisällä, tämä näkyy selaimessa...</p>
-    <p [innerHTML]="!allowNewServer"> tämä sen sijaan ei näy seläimessa </p>
-    <p>Below this i have 2 Server Components</p>
-    <app-server></app-server>
+    <label>Server name is {{ serverName }}</label>
+    <input type="text"
+    class="form-control mb-3"
+    (input)="onUpdateServerName($event)">
+    <button 
+    [disabled]="!allowNewServer"
+     class="btn btn-primary"
+     (click)="onCreateServer()">Add Server</button>
+
+    <p>{{ serverCreationStatus }}</p>
+
+    <p>Below this i have Server Component</p>
     <app-server></app-server>
   </section>
