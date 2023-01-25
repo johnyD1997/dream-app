@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-servers',
-  template:  `<section>
-  <h1>Im in the Servers Component</h1>
-  <p>Below this i have 2 Server Components</p>
-  <app-server></app-server>
-  <app-server></app-server>
-</section>`,
+  templateUrl:  './servers.component.html',
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
+  allowNewServer: boolean = false;
 
-  constructor() { }
+  constructor() { 
+    setTimeout(()=> {
+      this.allowNewServer = true;
+    }, 2000);
+  }
 
   ngOnInit(): void {
   }

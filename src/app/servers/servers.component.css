@@ -10,3 +10,7 @@ p{
     text-align: center;
     font-size: 2rem;
 }
+
+.servers-component{
+    background-color: rgb(255, 208, 151);
+}
