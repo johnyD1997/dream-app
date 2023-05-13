@@ -97,7 +97,7 @@
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
-          "baseHref":"https://github.com/johnyD1997/my-dream-app.git"
+          "baseHref":"https://johnyd1997.github.io/my-dream-app/"
         }
       }
     }
