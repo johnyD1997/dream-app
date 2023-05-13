@@ -16,7 +16,9 @@
 
      <!-- <p class="sisennys">{{ serverName }}</p> -->
      <p class="sisennys">{{ serverCreationStatus }}</p>
-
-    <p>Below this i have Server Component</p>
-    <app-server></app-server>
+     <p *ngIf="serverCreated" class="sisennys">Server was created! Server name is {{serverName}}</p>
+      <!-- <ng-template #noServer>
+        <p>No server created!</p>
+      </ng-template> -->
+      <app-server *ngFor="let server of servers"></app-server>
   </section>
