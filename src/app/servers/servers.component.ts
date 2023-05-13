@@ -9,7 +9,7 @@ import { timeout } from 'rxjs';
 export class ServersComponent implements OnInit {
   allowNewServer: boolean = false;
   serverCreationStatus = 'No server was created!';
-  serverName = '';
+  serverName = 'testServer';
 
   constructor() { 
     setTimeout(()=> {
@@ -21,7 +21,7 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer(){
-    return this.serverCreationStatus = 'Server was created!';
+    return this.serverCreationStatus = 'Server was created!Server name is ' + this.serverName;
   }
 
   onUpdateServerName(event: any){

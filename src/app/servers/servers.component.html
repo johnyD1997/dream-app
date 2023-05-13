@@ -1,15 +1,21 @@
 <section class="servers-component">
     <h1>Im in the Servers Component</h1>
     <label>Server name is {{ serverName }}</label>
-    <input type="text"
+    <!-- <input 
+    type="text"
     class="form-control mb-3"
-    (input)="onUpdateServerName($event)">
+    (input)="onUpdateServerName($event)"> -->
+    <input 
+    type="text"
+    class="form-control mb-3"
+    [(ngModel)]="serverName">
     <button 
     [disabled]="!allowNewServer"
      class="btn btn-primary"
      (click)="onCreateServer()">Add Server</button>
 
-    <p>{{ serverCreationStatus }}</p>
+     <!-- <p class="sisennys">{{ serverName }}</p> -->
+     <p class="sisennys">{{ serverCreationStatus }}</p>
 
     <p>Below this i have Server Component</p>
     <app-server></app-server>
