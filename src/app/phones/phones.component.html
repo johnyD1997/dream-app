@@ -1,1 +1,2 @@
-<app-phone-lists></app-phone-lists>
+<input type="text" [(ngModel)]="searchString" class="search" placeholder="Search">
+<app-phone-lists [searchValue]="searchString"></app-phone-lists>

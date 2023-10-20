@@ -14,6 +14,7 @@ import { PhoneListsComponent } from './phones/phone-lists/phone-lists.component'
 import { PhoneItemComponent } from './phones/phone-lists/phone-item/phone-item.component';
 import { PhoneDetailsComponent } from './phones/phone-details/phone-details.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     PhonesComponent,
     PhoneListsComponent,
     PhoneItemComponent,
-    PhoneDetailsComponent
+    PhoneDetailsComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

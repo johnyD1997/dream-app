@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PhonesService } from '../phones.service';
-import { Phone } from '../phone.model';
 
 @Component({
   selector: 'app-phone-lists',
@@ -10,6 +9,7 @@ import { Phone } from '../phone.model';
 export class PhoneListsComponent implements OnInit {
 
   phones: any = [];
+  @Input() searchValue: string = '';
 
   constructor(private phonesService: PhonesService) { }
 
