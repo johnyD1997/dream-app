@@ -1,0 +1,13 @@
+<div class="module">
+    <input 
+    type="text"
+    class="form-control mb-3"
+    [(ngModel)]="userName">
+    
+    <p>User name is {{ userName }}</p>
+    
+    <button
+    [disabled]="userName === ''" 
+    (click)="clearUserName()"
+    class="btn btn-primary">Clear</button>
+</div>

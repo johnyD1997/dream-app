@@ -1,0 +1,18 @@
+.custom-img{
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    object-position: center;
+    align-self: center; 
+}
+.custom-text{
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 70px;
+}
+
+.custom-button{
+    width: 150px;
+    align-self: center;
+    margin-bottom: 1rem;
+}

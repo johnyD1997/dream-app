@@ -1,0 +1,8 @@
+.module{
+    width:400px;
+    height: max-content;
+    margin: 2rem auto;
+    padding: 4rem;
+    border: 1px solid #bebebe;
+    border-radius: 5px;
+}

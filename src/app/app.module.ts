@@ -8,6 +8,12 @@ import { ServersComponent } from './servers/servers.component';
 import { DisplayDetailsComponent } from './display-details/display-details.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MyDreamAppComponent } from './my-dream-app/my-dream-app.component';
+import { UsernameCheckComponent } from './username-check/username-check.component';
+import { PhonesComponent } from './phones/phones.component';
+import { PhoneListsComponent } from './phones/phone-lists/phone-lists.component';
+import { PhoneItemComponent } from './phones/phone-lists/phone-item/phone-item.component';
+import { PhoneDetailsComponent } from './phones/phone-details/phone-details.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,12 +21,18 @@ import { MyDreamAppComponent } from './my-dream-app/my-dream-app.component';
     ServerComponent,
     ServersComponent,
     DisplayDetailsComponent,
-    MyDreamAppComponent
+    MyDreamAppComponent,
+    UsernameCheckComponent,
+    PhonesComponent,
+    PhoneListsComponent,
+    PhoneItemComponent,
+    PhoneDetailsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
