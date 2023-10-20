@@ -1,5 +1,6 @@
-
-<section>
-    <h1>Im in the App Component</h1>
-    <app-servers></app-servers>
+<section class="navigator">
+    <div class="nav-item" (click)="openProject('directives')">Sovella NG Directives</div>
+    <div class="nav-item" (click)="openProject('my-dream-app')">My Dream App (kaikki tehtävät)</div>
 </section>
+<hr>
+<router-outlet></router-outlet>

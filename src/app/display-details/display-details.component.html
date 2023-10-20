@@ -1,0 +1,10 @@
+<button (click)="onChangesActive()">Display details</button>
+<p *ngIf="active">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat iusto sapiente, aliquam fuga ipsa ipsum impedit nobis officia ipsam maiores odio sed dolorum nihil rerum sint explicabo beatae ullam quidem?</p>
+<div *ngFor="let click of arrayOFClicks">
+    <p *ngIf="click < 5">{{click}}</p>
+<p *ngIf="click >= 5"
+[ngStyle]="{background: getBGColor()}"
+[ngClass]="{'moreThan5': click > 4}">
+    {{click}}
+</p>
+</div>
