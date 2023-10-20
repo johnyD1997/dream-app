@@ -1,0 +1,35 @@
+.carousel-custom{
+    width: 70%;
+    align-self: center;
+    margin: 0 auto;
+}
+
+.images{
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    object-position: center;
+    align-self: center; 
+}
+
+.custom-card{
+    padding: 1rem;
+
+}
+
+.description{
+    margin: 1rem auto;
+    width: 65%;
+}
+
+.technical-info h4{
+    margin: 2rem auto;
+    width: 100%;
+    text-align: center;
+}
+
+.technical-info p{
+    margin: 0.2rem;
+    padding-left: 1rem;
+
+}

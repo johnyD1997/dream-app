@@ -1,1 +1,93 @@
-<p>phone-details works!</p>
+<div id="carouselExampleAutoplaying" class="carousel slide carousel-custom" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item text-center" *ngFor="let img of phoneDetails.images; let i = index" [ngClass]="{'active': i === 0}">
+            <img src="assets/{{img}}" alt="" class="images mx-auto">
+          </div>
+      </div>
+      <button class="carousel-control-prev" type="button" style="background-color: #dcdcdc;" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" style="background-color: #dcdcdc;" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  <div class="description">
+    <h4>Description</h4>
+    <p>{{phoneDetails.description}}</p>
+  </div>
+
+  <div class="technical-info">
+      <h4>Technical information</h4>
+      <div class="d-flex gap-3 flex-wrap justify-content-center">
+        <div class="card custom-card" style="width: 24rem;">
+            <h6 class="card-title">Dimensions and weight</h6>
+            <hr style="margin: 0.5rem 0 1.2rem;">
+            <p>Height: {{phoneDetails.sizeAndWeight.dimensions[1]}}</p>
+            <p>Width: {{phoneDetails.sizeAndWeight.dimensions[0]}}</p>
+            <p>Depth: {{phoneDetails.sizeAndWeight.dimensions[2]}}</p>
+            <p>Weight: {{phoneDetails.sizeAndWeight.weight}}</p>
+        </div>
+        <div class="card custom-card" style="width: 24rem;">
+            <h6 class="card-title">Display</h6>
+            <hr style="margin: 0.5rem 0 1.2rem;">
+            <p>Screen size: {{phoneDetails.display.screenSize}}</p>
+            <p>Screen resolution: {{phoneDetails.display.screenResolution}}</p>
+            <p>Touch screen: <i *ngIf="phoneDetails.display.touchScreen" class="fa-solid fa-check"></i></p>
+        </div>
+        <div class="card custom-card" style="width: 24rem;">
+            <h6 class="card-title">Hardware</h6>
+            <hr style="margin: 0.5rem 0 1.2rem;">
+            <p>CPU: {{phoneDetails.hardware.cpu}}</p>
+            <p>USB: {{phoneDetails.hardware.usb}}</p>
+            <p>Audio / headphone jack: {{phoneDetails.hardware.audioJack}}</p>
+            <p>FM radio: <i *ngIf="phoneDetails.hardware.fmRadio" class="fa-solid fa-check"></i></p>
+            <p>Accelerometer: <i *ngIf="phoneDetails.hardware.accelerometer" class="fa-solid fa-check"></i></p>
+            <p>Physical keyboard: <i *ngIf="phoneDetails.hardware.physicalKeyboard" class="fa-check fa-solid"></i></p>
+        </div>
+        <div class="card custom-card" style="width: 24rem;">
+            <h6 class="card-title">Camera</h6>
+            <hr style="margin: 0.5rem 0 1.2rem;">
+            <p>Primary: {{phoneDetails.camera.primary}}</p>
+            <p>Features: {{phoneDetails.camera.features}}</p>
+        </div>
+        <div class="card custom-card" style="width: 24rem;">
+            <h6 class="card-title">Additional features</h6>
+            <hr style="margin: 0.5rem 0 1.2rem;">
+            <p>{{phoneDetails.additionalFeatures}}</p>
+        </div>
+        <div class="card custom-card" style="width: 24rem;">
+            <h6 class="card-title">Battery</h6>
+            <hr style="margin: 0.5rem 0 1.2rem;">
+            <p>Type: {{phoneDetails.battery.type}}</p>
+            <p>Talk time: {{phoneDetails.battery.talkTime}}</p>
+            <p>Standby time (max): {{phoneDetails.battery.standbyTime}}</p>
+        </div>
+        <div class="card custom-card" style="width: 24rem;">
+            <h6 class="card-title">Storage and memory</h6>
+            <hr style="margin: 0.5rem 0 1.2rem;">
+            <p>RAM: {{phoneDetails.storage.ram}}</p>
+            <p>Internal storage: {{phoneDetails.storage.flash}}</p>
+        </div>
+        <div class="card custom-card" style="width: 24rem;">
+            <h6 class="card-title">Connectivity</h6>
+            <hr style="margin: 0.5rem 0 1.2rem;">
+            <p>GPS: <i *ngIf="phoneDetails.connectivity.gps" class="fa-check fa-solid"></i></p>
+            <p>Networks: {{phoneDetails.connectivity.cell}}</p>
+            <p>WiFi: {{phoneDetails.connectivity.wifi}}</p>
+            <p>Bluetooth: {{phoneDetails.connectivity.bluetooth}}</p>
+        </div>
+        <div class="card custom-card" style="width: 24rem;">
+            <h6 class="card-title">Android</h6>
+            <hr style="margin: 0.5rem 0 1.2rem;">
+            <p>OS: {{phoneDetails.android.os}}</p>
+            <p>UI: {{phoneDetails.android.ui}}</p>
+        </div>
+        <div class="card custom-card" style="width: 24rem;">
+            <h6 class="card-title">Availability</h6>
+            <hr style="margin: 0.5rem 0 1.2rem;">
+            <p>Available: {{phoneDetails.availability}}</p>
+        </div>
+      </div>
+  </div>

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { PhonesService } from '../phones.service';
+import { PhoneDetails } from '../phone-details.model';
 
 @Component({
   selector: 'app-phone-details',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhoneDetailsComponent implements OnInit {
 
-  constructor() { }
+  phoneDetails!: PhoneDetails;
+  
+  constructor(private activatesRoute: ActivatedRoute, private phoneService: PhonesService) { }
 
   ngOnInit(): void {
+    this.activatesRoute.paramMap.subscribe(params => {
+      this.phoneService.getDetails(params.get('id')!).subscribe((data) => {
+        this.phoneDetails = JSON.parse(JSON.stringify(data));
+        console.log(this.phoneDetails);
+      });
+    })
   }
 
 }

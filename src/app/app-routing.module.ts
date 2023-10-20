@@ -5,6 +5,7 @@ import { MyDreamAppComponent } from './my-dream-app/my-dream-app.component';
 import { DisplayDetailsComponent } from './display-details/display-details.component';
 import { UsernameCheckComponent } from './username-check/username-check.component';
 import { PhonesComponent } from './phones/phones.component';
+import { PhoneDetailsComponent } from './phones/phone-details/phone-details.component';
 
 const routes: Routes = [
   { 
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'phones',
     component: PhonesComponent
+  },
+  {
+    path: 'details/:id',
+    component: PhoneDetailsComponent
   }
 ];
 

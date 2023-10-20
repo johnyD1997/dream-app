@@ -1,8 +1,8 @@
-<div class="card custom-card" style="width: 18rem; height: 50vh;">
+<div class="card custom-card mb-3" style="width: 18rem; height: 50vh;">
     <img src="assets/{{phone.imageUrl}}" [alt]="phone.imageUrl"  class="card-img-top custom-img">
     <div class="card-body">
       <h5 class="card-title">{{phone.name}}</h5>
       <p class="card-text custom-text">{{phone.snippet}}</p>
     </div>
-    <a href="#" class="btn btn-primary custom-button">Show more</a>
+    <button (click)="showDetails(phone.id)" class="btn btn-primary custom-button">Show more</button>
 </div>

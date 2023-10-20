@@ -1,6 +1,6 @@
-<div class="container text-center">
-    <div class="row">
-        <div class="p-3" *ngFor="let item of phones | search: searchValue">
+<div class="container text-center d-flex">
+    <div class="d-flex flex-wrap gap-3 ">
+        <div *ngFor="let item of phones | search: searchValue">
             <app-phone-item
              [phone]="item">
             </app-phone-item>
